@@ -1,0 +1,45 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.2.
+--
+-- see: https://github.com/sol/hpack
+
+name:           sol
+version:        0.1.0.0
+description:    Playing around with advent of code 2022
+homepage:       https://github.com/kuxi/advent2022#readme
+bug-reports:    https://github.com/kuxi/advent2022/issues
+author:         Heiðar Þórðarson
+maintainer:     heidarlitli@gmail.com
+copyright:      2022 Heiðar Þórðarson
+license:        BSD3
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/kuxi/advent2022
+
+library
+  exposed-modules:
+      Lib
+      Sol.Day1
+  other-modules:
+      Paths_sol
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable sol
+  main-is: Main.hs
+  other-modules:
+      Paths_sol
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , sol
+  default-language: Haskell2010
